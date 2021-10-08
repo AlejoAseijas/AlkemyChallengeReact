@@ -1,12 +1,11 @@
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/logIn.scss'
 import  Axios from 'axios';
 import {Formik, Form, Field, ErrorMessage} from 'formik'
 
 
 
-function LogIn() {
+function LogIn({setAuth}) {
     async function ApiConnect(data) {
       try{
         const res = await Axios.post('http://challenge-react.alkemy.org/',{
@@ -14,7 +13,7 @@ function LogIn() {
           password: data.passwordUser
       })
       localStorage.setItem('token', res.data.token);
-      console.log('Ingresado');
+      setAuth(true)
       } catch(err){
         alert(err)
       }
