@@ -3,7 +3,7 @@ import Axios from 'axios'
 import {Formik, Form, Field, ErrorMessage} from 'formik'
 import Header from './Header';
 import Results from './Results'
-import '../styles/search.scss'
+import '../styles/card.scss'
 
 function SearchHero() {
     const [heroe, setHeroe] = useState([])
@@ -26,7 +26,7 @@ function SearchHero() {
  
     return (
         <>
-         <Header/>
+        <Header></Header>
         <Formik
         initialValues={{
           heroName: ''
@@ -59,7 +59,9 @@ function SearchHero() {
                           className="form-control"
                           id="heroOfName"
                           name='heroName'
-                          placeholder='Batman' />
+                          placeholder='Batman' 
+                          autoComplete='on'
+                          />
                         <ErrorMessage name='heroName' component={() => (
                           <div className='error'> {errors.heroName} </div>
                         )} />

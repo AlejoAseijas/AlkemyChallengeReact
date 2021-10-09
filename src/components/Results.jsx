@@ -1,19 +1,42 @@
+/* eslint-disable default-case */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React,{ useState } from 'react'
+import React from 'react'
 import '../styles/card.scss'
+let heroeid = [];
+let heroesSelected = 0;
+let badSelected = 0;
 
 function Results(heroe) {
 
-const [heroes, setHeroes] = useState([])
-
-setHeroes(...heroes+heroe)
-
-console.log(heroes);
-
   function handlerClick(e){
     e.preventDefault();
-    console.log(e.target.dataset);
+    if(heroeid.length <= 5){
+      switch(heroe.dataHeroe.biography.alignment) {
+        case 'good':
+          if (heroesSelected <= 2){
+            heroeid.push(heroe.dataHeroe);
+            heroesSelected=heroesSelected+1
+          }else{
+            alert('Full heroes')
+          }
+        break;
+        case 'bad':
+          if (badSelected <= 2){
+            heroeid.push(heroe.dataHeroe);
+            badSelected=badSelected+1
+          }else{
+            alert('Full bad')
+          }
+        break;  
+      }
+    }else{
+      alert('Full Team');
+    }
+    if(heroeid.length === 6){
+    localStorage.setItem('team', JSON.stringify(heroeid))
   }
+  }
+
 
   return (
     <div className="card">

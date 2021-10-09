@@ -1,9 +1,10 @@
 import React,{useEffect, useState} from "react";
 import LogIn from "./pages/LogIn";
 import Home from './pages/Home'
+import SearchHero from './components/SearchHero'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Search from "./pages/Search";
+
 function App() {
   const [auth, setAuth] = useState(false)
 
@@ -29,7 +30,7 @@ function App() {
         </Route>
     }
     <Route exact path='/search'>
-      <Search/>
+          <SearchHero></SearchHero>
     </Route>
     </Switch>
    </Router>
