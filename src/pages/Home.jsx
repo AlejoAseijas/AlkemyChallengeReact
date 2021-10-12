@@ -1,28 +1,38 @@
 import React from "react";
 import Header from "../components/Header";
-import CardFront from "../components/CardFront";
+import Cards from "../components/Cards";
+import Summary from "../components/Summary";
+import "../styles/home.scss";
 function Home() {
   const heroes = JSON.parse(localStorage.getItem("team"));
-
   return (
-    <>
+    <div className="container-md">
       <Header></Header>
-      <h1>My team</h1>
-      <h2>The team can only consist of 3 heroes and 3 villains</h2>
-      <div className="gridResults">
+      <h1 className="fs-1 text-center">My team</h1>
+
+      {heroes === null ? <></> : <Summary data={heroes} />}
+
+      <div className="mt-2 container-md" id="gridResults">
         {heroes === null ? (
-          <> </>
+          <></>
         ) : (
-          heroes.map((data) => (
-            <CardFront
-              img={data.image.url}
-              name={data.name}
-              powerStats={data.powerstats}
-            />
-          ))
+          heroes.map((data) => {
+            return (
+              <Cards
+                name={data.name}
+                image={data.image.url}
+                powerstats={data.powerstats}
+                key={data.id}
+                appearance={data.appearance}
+                biography={data.biography}
+                work={data.work}
+                id={data.id}
+              />
+            );
+          })
         )}
       </div>
-    </>
+    </div>
   );
 }
 

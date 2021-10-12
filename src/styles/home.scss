@@ -1,0 +1,11 @@
+body {
+  background-image: url("../img/homeBackGround.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#gridResults {
+  display: flex;
+  justify-content: center;
+}

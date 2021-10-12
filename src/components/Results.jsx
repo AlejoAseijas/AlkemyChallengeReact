@@ -1,7 +1,6 @@
 /* eslint-disable default-case */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import "../styles/card.scss";
 let heroeid = [];
 let heroesSelected = 0;
 let badSelected = 0;
