@@ -26,7 +26,7 @@ function Summary(heroes) {
 
   return (
     <>
-      <div className="w-25 container border">
+      <div className="container border">
         <div className="row mb-2">
           <div className="col">
             <h6 className="text-center">TOTAL COMBAT</h6>

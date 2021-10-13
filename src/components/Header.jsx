@@ -9,7 +9,9 @@ function Header() {
   }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link to={"/"}> Alkemy Challenge Heroe App </Link>
+      <div className="brand">
+        <Link to={"/"}> Alkemy Challenge Heroe App </Link>
+      </div>
       <button
         className="navbar-toggler"
         type="button"
@@ -24,13 +26,13 @@ function Header() {
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item">
+          <li className="nav-item m-2">
             <NavLink to={"/search"}> Search Heroe </NavLink>
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">
           <button
-            className="btn btn-outline-success my-2 my-sm-0"
+            className="btn btn-danger m-2"
             type="submit"
             onClick={handlerClick}
           >

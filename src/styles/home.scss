@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+* {
+  font-family: Quicksand;
+}
+
 body {
-  background-image: url("../img/homeBackGround.jpg");
+  background-color: rgba($color: #414141, $alpha: 1);
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -7,5 +13,24 @@ body {
 
 #gridResults {
   display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
   justify-content: center;
+}
+
+.brand {
+  margin-left: 1rem;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #gridResults {
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
 }

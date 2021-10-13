@@ -3,6 +3,7 @@ import Axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import Header from "./Header";
 import Results from "./Results";
+import "../styles/home.scss";
 
 function SearchHero() {
   const [heroe, setHeroe] = useState([]);
