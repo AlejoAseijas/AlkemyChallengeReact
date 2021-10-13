@@ -7,10 +7,8 @@ let badSelected = 0;
 
 function Results(heroe) {
   const [team, setTeam] = useState(6);
-
   function handlerClick(e) {
     e.preventDefault();
-
     if (heroeid.length <= 5) {
       switch (heroe.dataHeroe.biography.alignment) {
         case "good":
@@ -38,7 +36,7 @@ function Results(heroe) {
   }
 
   return (
-    <div className="card">
+    <div className="m-2 card">
       <img src={heroe.dataHeroe.image.url} className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title">{heroe.dataHeroe.name}</h5>
@@ -48,7 +46,7 @@ function Results(heroe) {
           {heroe.dataHeroe.biography.alignment}
         </li>
       </ul>
-      <div className="card-body">
+      <div className="d-flex justify-content-center card-body">
         <button
           type="button"
           className="btn btn-primary"

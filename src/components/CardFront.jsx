@@ -9,7 +9,7 @@ function CardFront({ name, image, powerstats, setFlipped, id }) {
   }
 
   return (
-    <div className="w-50 mb-2 card">
+    <div className="m-2 card">
       <img src={image} className="w-auto" alt="..." />
       <div className="card-body">
         <div className="card-title">

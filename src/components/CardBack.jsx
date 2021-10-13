@@ -4,7 +4,7 @@ function CardBack({ appearance, biography, name, image, work, setFlipped }) {
   const alignment = biography.alignment === "good" ? "Hero" : "Villain";
   const base = work.base.split(", ");
   return (
-    <div className="card">
+    <div className="mb-2 card">
       <div className="card-content mx-3 p-0 pt-2">
         <div className="media">
           <div className="media-content">

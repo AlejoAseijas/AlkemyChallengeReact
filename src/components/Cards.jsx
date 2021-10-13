@@ -7,7 +7,7 @@ function Card({ name, image, powerstats, appearance, biography, work, id }) {
   const [flip, setFlipped] = useState(true);
 
   return (
-    <ReactCardFlip isFlipped={!flip} flipDirection="vertical">
+    <ReactCardFlip isFlipped={!flip} flipDirection="horizontal">
       <CardFront
         name={name}
         image={image}
