@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 //import "../styles/progressBar.scss";
 function Summary(heroes) {
   let power = 0;
@@ -26,7 +26,7 @@ function Summary(heroes) {
 
   return (
     <>
-      <div className="w-25 container border">
+      <div className="w-25 container border" id="powerstas">
         <div className="row mb-2">
           <div className="col">
             <h6 className="text-center">TOTAL COMBAT</h6>

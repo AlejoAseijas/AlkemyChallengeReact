@@ -3,9 +3,19 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-}
 
-#gridResults {
-  display: flex;
-  justify-content: center;
+  #root {
+    display: flex;
+    justify-content: center;
+    #gridResults {
+      border: 1px solid black;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      width: auto;
+    }
+    #powerstas {
+      float: left;
+    }
+  }
 }

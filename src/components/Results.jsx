@@ -7,8 +7,10 @@ let badSelected = 0;
 
 function Results(heroe) {
   const [team, setTeam] = useState(6);
+
   function handlerClick(e) {
     e.preventDefault();
+
     if (heroeid.length <= 5) {
       switch (heroe.dataHeroe.biography.alignment) {
         case "good":

@@ -22,7 +22,10 @@ function Header() {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div
+        className="collapse navbar-collapse mx-5"
+        id="navbarSupportedContent"
+      >
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <NavLink to={"/search"}> Search Heroe </NavLink>
@@ -30,7 +33,7 @@ function Header() {
         </ul>
         <form className="form-inline my-2 my-lg-0">
           <button
-            className="btn btn-outline-success my-2 my-sm-0"
+            className="btn btn-danger my-2 my-sm-0 mx-5"
             type="submit"
             onClick={handlerClick}
           >
