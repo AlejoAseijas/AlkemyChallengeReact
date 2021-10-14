@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 //import "../styles/progressBar.scss";
 function Summary(heroes) {
   let power = 0;
@@ -7,6 +7,8 @@ function Summary(heroes) {
   let durability = 0;
   let speed = 0;
   let strength = 0;
+  let averageWeight = 0;
+  let averageHeight = 0;
 
   for (let d of heroes.data) {
     power += parseInt(d.powerstats.power);
@@ -15,6 +17,8 @@ function Summary(heroes) {
     durability += parseInt(d.powerstats.durability);
     speed += parseInt(d.powerstats.speed);
     strength += parseInt(d.powerstats.strength);
+    averageWeight += parseInt(d.appearance.weight[1]);
+    averageHeight += parseInt(d.appearance.height[1]);
   }
 
   let powerProgress = Math.round((power * 100) / 600);
@@ -126,11 +130,16 @@ function Summary(heroes) {
         <div className="row mb-2">
           <div className="col">
             <h6 className="text-center fs-5">Average Height</h6>
-            <h6 className="text-center fs-6 fw-bold"> 500 </h6>
+            <h6 className="text-center fs-6 fw-bold">
+              {" "}
+              {averageHeight / heroes.data.length + " cm"}
+            </h6>
           </div>
           <div className="col">
             <h6 className="text-center fs-5">Average Weight</h6>
-            <h6 className="text-center fs-6 fw-bold"> 500 </h6>
+            <h6 className="text-center fs-6 fw-bold">
+              {averageWeight / heroes.data.length + " kg"}
+            </h6>
           </div>
         </div>
       </div>
