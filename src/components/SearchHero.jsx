@@ -12,7 +12,7 @@ function SearchHero() {
   async function getHeroData(hero) {
     try {
       const response = await Axios.get(
-        `https://superheroapi.com/api/4769568433087831/search/${hero.heroName}`
+        `http://superheroapi.com/api/4769568433087831/search/${hero.heroName}`
       );
       setHeroe(response);
       response.data.response === "success"

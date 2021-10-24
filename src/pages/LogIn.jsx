@@ -6,7 +6,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 function LogIn({ setAuth }) {
   async function ApiConnect(data) {
     try {
-      const res = await Axios.post("https://challenge-react.alkemy.org/", {
+      const res = await Axios.post("http://challenge-react.alkemy.org/", {
         email: data.emailUser,
         password: data.passwordUser,
       });

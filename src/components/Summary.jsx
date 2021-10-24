@@ -1,5 +1,4 @@
 import React from "react";
-//import "../styles/progressBar.scss";
 function Summary(heroes) {
   let power = 0;
   let intelligence = 0;
@@ -9,6 +8,7 @@ function Summary(heroes) {
   let strength = 0;
   let averageWeight = 0;
   let averageHeight = 0;
+  let typeTeam = [];
 
   for (let d of heroes.data) {
     power += parseInt(d.powerstats.power);
@@ -20,6 +20,26 @@ function Summary(heroes) {
     averageWeight += parseInt(d.appearance.weight[1]);
     averageHeight += parseInt(d.appearance.height[1]);
   }
+
+  let stuctTypeTeam = {
+    powerTeam: power,
+    intelligenceTeam: intelligence,
+    combatTeam: combat,
+    durabilityTeam: durability,
+    speedTeam: speed,
+    strengthTeam: strength,
+  };
+
+  typeTeam.push(stuctTypeTeam);
+
+  const maxType = Math.max(
+    stuctTypeTeam.powerTeam,
+    stuctTypeTeam.intelligenceTeam,
+    stuctTypeTeam.combatTeam,
+    stuctTypeTeam.durabilityTeam,
+    stuctTypeTeam.strengthTeam,
+    stuctTypeTeam.strengthTeam
+  );
 
   let powerProgress = Math.round((power * 100) / 600);
   let intelligenceProgress = Math.round((intelligence * 100) / 600);

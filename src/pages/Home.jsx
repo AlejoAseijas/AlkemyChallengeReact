@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Cards from "../components/Cards";
 import Summary from "../components/Summary";
 import "../styles/home.scss";
+
 function Home() {
   const heroes = JSON.parse(localStorage.getItem("team"));
   return (
